@@ -12,3 +12,17 @@
     <a href="/">Go back</a>
 </body>
 </html>
+<!-- {% include 'base.html' %} -->
+{% if summary %}
+<h2>Summary</h2>
+<p>{{ summary }}</p>
+{% endif %}
+
+{% if keywords %}
+<h2>keywords</h2>
+<ul>
+    {% for keywords in keywords %}
+    <li>{{ keywords }}</li>
+    {% endfor %}
+</ul>
+{% endif %}
